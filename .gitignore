@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+scripts/lerobot/fms688.env
+*.log
+*.tar
+*.tar.sha256
+*.parquet
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.mp4
+打包结果/
