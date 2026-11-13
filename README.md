@@ -46,6 +46,8 @@ bash scripts/lerobot/interactive_collection.sh
 
 在配置中填写本机的数据目录、任务/版本、主从臂串口和两路相机；优先使用 `/dev/serial/by-id/`、`/dev/v4l/by-id/`。也可先激活自己安装的 0.6.1 环境，再启动菜单。采集选项 3 需要图形桌面、`gnome-terminal` 和 `script`，会进入日期任务选择和预检；菜单 1、3、4、5、11、6 分别用于预检、采集、检查、回放、填写 QA 和关轮。录制控制窗口按提示输入 `s`、`n`、`r`、`q` 后回车；`q` 不是急停。详见[采集阶段指南](阶段指南/01-采集.md)和[交互采集助手](SO101_交互采集助手.md)。
 
+实时画面和已保存轨迹如何查看，见 [Rerun 可视化界面与轨迹回放](阶段指南/04-Rerun可视化.md)。
+
 自动化入口及调用关系：`interactive_collection.sh` → `configure_collection.py` → `preflight_collection.sh` / `init_round.sh` → `record_terminal.sh` / `record_round.sh` → `record_sent_action.py`。审核、封存、同步等脚本在同一 `scripts/lerobot/` 下；工具保留保护与人工确认步骤，不会自动替代现场验收。
 
 ### 训练服务器和 Jetson：从哪里开始
